@@ -1,0 +1,7 @@
+## Interface: 70100
+## Title: LootRoll
+## Author: Bakna
+## Version: 0.1
+#For WoW version 7.1.5
+
+main.lua
