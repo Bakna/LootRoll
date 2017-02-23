@@ -5,3 +5,4 @@
 #For WoW version 7.1.5
 
 main.lua
+timer.lua
