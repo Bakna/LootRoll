@@ -3,9 +3,11 @@ local list = {}
 
 function LR_Roll(item)
   for i=1,table.get(list) do list[i] = 0 end
-  it = item
-  SendChatMessage("Roll for "..item, "RAID")
-  LootRoll_wait(240, LR_msg1)
+  if item then
+    it = item
+    SendChatMessage("Roll for "..item, "RAID")
+    LootRoll_wait(240, LR_msg1)
+  end
 end
 
 local function LR_msg1()
