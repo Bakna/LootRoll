@@ -1,7 +1,11 @@
 local it
 local list = {}
 
-function LR_Roll(item)
+SLASH_LOOTROLL = "/LootRoll", "LR_Roll";
+
+slashCmdList["SLASH_LOOTROLL"] = LR_Roll(args)
+
+local function LR_Roll(item, editbox)
   for i=1,table.get(list) do list[i] = 0 end
   if item then
     it = item
@@ -36,7 +40,7 @@ f:SetScript("OnEvent",function(self,event,...)
   if arg1 then
     local name,roll,minRoll,maxRoll = arg1:match("^(.+) rolls (%d+) %((%d+)%-(%d+)%)$")
     if name then
-      print("recieved")
+      print("received")
       if minRoll == 1 and maxRoll == 100 then
       table.insert(list,{name,roll})
       end
